@@ -22,8 +22,7 @@ public interface SymbolTable<Key, Value> {
      * Remove key (and it's value) from the table.
      */
     default void delete(Key key) {
-        // find the key in the table and set
-        // its associated value to null
+        // find the key in the table and set value to null
         // (this is called "lazy deletion")
         put(key, null);
     }
